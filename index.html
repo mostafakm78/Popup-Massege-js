@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./fonts/font.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>PopUp</title>
+</head>
+<body>
+    <div class="container">
+        <div class="btn">
+            <button type="submit" id="btn" onclick="OpenPopup()">ثبت</button>
+        </div>
+        <div id="popup">
+            <img src="./404-tick.png">
+            <h1>خرید شما ثبت شـد</h1>
+            <p>با تشکر از شما بابت خرید از سایت</p>
+            <button onclick="ClosePopUp()">بستن</button>
+        </div>
+    </div>
+
+    <script>
+        let popup = document.querySelector('#popup')
+
+        function OpenPopup() {
+            popup.classList.add('active')
+        }
+
+        function ClosePopUp() {
+            popup.classList.remove('active')
+        }
+    </script>
+</body>
+</html>
